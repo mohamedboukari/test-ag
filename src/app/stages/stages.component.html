@@ -1,0 +1,41 @@
+<div class="p-6">
+    <div class="flex justify-between ">
+        <h4 class="text-3xl text-indigo-500">stages</h4>
+
+    </div>
+
+
+    <input placeholder="search..." [value]="search"
+        class="outline-none border-gray-300 border placeholder:text-gray-600 rounded-lg p-2" [(ngModel)]="search"
+        (ngModelChange)="updateItems()" />
+
+    <div class=" grid  grid-cols-[repeat(auto-fill,minmax(384px,1fr))]  h-max items-center justify-center gap-3 ">
+        <div *ngFor="let item of stages"
+            class="max-w-sm  bg-white p-4 rounded-lg shadow hover:border hover:border-gray-400">
+            <div>
+                <div>
+                    <h5 class=" py-4 text-gray-400">id:{{
+                        item.id
+                        }}
+                    </h5>
+                    <p class=" py-4 text-gray-400">titre: {{
+                        item.titre
+                        }}
+                    </p>
+
+                    <p class=" py-4 text-gray-400">entreprise:{{ item.description }}</p>
+                    <p class=" py-4 text-gray-400">entreprise: {{item.entreprise}}</p>
+                    <p class=" py-4 text-gray-400">disponible: {{item.disponible }}</p>
+                    <p class=" py-4 text-gray-400">nbrInteresse: {{item.nbrInteresse }}</p>
+
+
+
+                </div>
+                <button class=" rounded-md bg-red-600 px-3 text-white py-1.5" (click)="handleDelete(item.id)">
+                    delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
