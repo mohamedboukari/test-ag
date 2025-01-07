@@ -1,18 +1,10 @@
 {
-  "stage": [
+  "stages": [
     {
-      "id": "2",
-      "titre": "sjsj",
-      "entreprise": "esprit",
-      "description": "ajaha ahahja ajaha ahhsg ",
-      "disponible": true,
-      "nbrInteresse": 0
-    },
-    {
-      "id": "99",
-      "titre": "chhdhds",
-      "entreprise": "Skdjjd",
-      "description": "sjshdshsd",
+      "id": "4",
+      "titre": "awaa",
+      "entreprise": "Esprit",
+      "description": "amama",
       "disponible": true,
       "nbrInteresse": 0
     }

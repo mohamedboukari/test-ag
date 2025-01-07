@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Stage } from 'src/models/Stage';
-import { StageAxiosService } from '../services/stage-axios.service';
 import { Router } from '@angular/router';
+import { StageService } from '../services/stage.service';
 
 @Component({
-  selector: 'app-add-stage',
-  templateUrl: './add-stage.component.html',
+  selector: 'app-addstage',
+  templateUrl: './addstage.component.html',
 })
-export class AddStageComponent {
+export class AddstageComponent {
   stage: Stage | undefined = undefined;
   formStage: FormGroup = new FormGroup({});
 
-  constructor(private stageService: StageAxiosService, private route: Router) {}
+  constructor(private stageService: StageService, private route: Router) {}
 
   ngOnInit(): void {
     this.formStage = new FormGroup({
@@ -45,7 +45,7 @@ export class AddStageComponent {
       nbrInteresse: 0,
     };
 
-    this.stageService.createStage(body).then(() => {
+    this.stageService.createStage(body).subscribe(() => {
       this.route.navigateByUrl('/stage');
       this.formStage.reset();
     });

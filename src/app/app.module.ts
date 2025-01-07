@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { StagesComponent } from './stages/stages.component';
-import { AddStageComponent } from './add-stage/add-stage.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { StageComponent } from './stage/stage.component';
+import { AddstageComponent } from './addstage/addstage.component';
 import { Page404Component } from './page404/page404.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,9 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    StagesComponent,
-    AddStageComponent,
+    NavbarComponent,
+    StageComponent,
+    AddstageComponent,
     Page404Component,
   ],
   imports: [
@@ -25,7 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-
   providers: [],
   bootstrap: [AppComponent],
 })

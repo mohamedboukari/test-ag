@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './nav-bar.component.html',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavBarComponent {
+export class NavbarComponent {
   isMobileMenuOpen = false;
 
   toggleMobileMenu() {
